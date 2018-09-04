@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+  <Appenders>
+    <Console name="STDOUT" target="SYSTEM_OUT">
+      <PatternLayout pattern="%d | %5p | [%t] | %c:%M(%L) | %m %n"/>
+    </Console>
+    <File name="File" fileName="/usr/marsh/workspace/log4j2/logs/AppLog.log" append="false">
+    <PatternLayout pattern="%d | %5p | [%t] | %c:%M(%L) | %m %n"/>
+      
+    </File>
+  </Appenders>
+  
+  <Loggers>
+   <!--  <Logger name="com.dsilva.mms.web.controller" level="debug"/>
+    <Logger name="com.dsilva.mms.web.dao" level="debug"/>
+    <Logger name="com.dsilva.mms.web.exception" level="debug"/>
+    <Logger name="com.dsilva.mms.web.model" level="debug"/> -->
+    <Logger name="com.dsilva.log4j2" level="debug"/>
+    <Root level="debug">
+      <AppenderRef ref="STDOUT"/>
+      <AppenderRef ref="File"/>
+    </Root>
+  </Loggers>
+</Configuration>
